@@ -1,12 +1,23 @@
 {
-  "name": "warsawjs-workshop-31-calendar",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "Piotr Kowalski <piecioshka@gmail.com> (https://piecioshka.pl)",
-  "license": "MIT"
+    "name": "warsawjs-workshop-31-calendar",
+    "version": "1.0.0",
+    "description": "Back-end dla aplikacji klienckiej — kalendarz",
+    "author": "Piotr Kowalski <piecioshka@gmail.com> (https://piecioshka.pl)",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js",
+        "test": "jasmine web/**/*.test.js"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "dotenv": "^7.0.0",
+        "jasmine": "^3.4.0",
+        "morgan": "^1.9.1",
+        "nock": "^10.0.6",
+        "nodemon": "^1.18.10",
+        "supertest": "^4.0.2"
+    },
+    "dependencies": {
+        "express": "^4.16.4"
+    }
 }
