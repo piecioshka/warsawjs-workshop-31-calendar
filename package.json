@@ -1,0 +1,12 @@
+{
+  "name": "warsawjs-workshop-31-calendar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Piotr Kowalski <piecioshka@gmail.com> (https://piecioshka.pl)",
+  "license": "MIT"
+}
