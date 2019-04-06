@@ -16,8 +16,12 @@ TBA
 * [x] Wydzielenie konfiguracji do zewnętrznego pliku (`npm/dotenv`)
 * [x] Dodanie logowania (`npm/morgan`)
 * [x] Dodanie middleware-a do odczytywania body z zapytania POST (`npm/body-parser`)
-* [ ] Implementacja API dla [aplikacji](https://github.com/G3F4/warsawjs-workshop-31-calendar-client)
-    + `GET: /api/calendar?month={YYYY-MM}`
+* [x] Napisać testy weryfikujące endpointy (`npm/ajv`).
+    Wykorzystać schemy z katalogu `docs/schemas`.
+    Schemy są wygenerowane za pomocą <https://www.jsonschema.net/>.
+* [ ] Implementacja API na potrzeby części [klienckiej](https://github.com/G3F4/warsawjs-workshop-31-calendar-client) (`npm/dayjs`).
+
+    + `GET: /api/calendar?month={YYYY-MM}` — zwracanie danych do budowy kalendarza
 
         <details><summary>response body</summary>
 
@@ -37,7 +41,8 @@ TBA
 
         </details>
 
-    + `GET: /api/day?date={YYYY-MM-DD}`
+    + `GET: /api/day?date={YYYY-MM-DD}` — zwracanie danych do prezentowania
+        wydarzeń z pojedynczego dnia
 
         <details><summary>response body</summary>
 
@@ -57,7 +62,7 @@ TBA
 
         </details>
 
-    + `POST: /api/event`
+    + `POST: /api/event` — dodanie nowego wydarzenia (konkretnego dnia)
 
         <details><summary>request body</summary>
 
@@ -82,7 +87,7 @@ TBA
 
         </details>
 
-    + `PUT: /api/event/:id`
+    + `PUT: /api/event/:id` — aktualizacja wydarzenia
 
         <details><summary>request body</summary>
 
@@ -106,7 +111,7 @@ TBA
 
         </details>
 
-    + `DELETE: /api/event/:id`
+    + `DELETE: /api/event/:id` — usunięcie wydarzenia
 
         <details><summary>request body</summary>
 
@@ -155,8 +160,6 @@ TBA
 
         </details>
 
-* [ ] Napisać testy weryfikujące endpointy — wykorzystać schemy z katalogu
-    `docs/schemas`. Schemy są wygenerowane za pomocą <https://www.jsonschema.net/>
 * [ ] Podłączenie się od bazy danych (`npm/mongoose`)
 * [ ] Bonus: Dodanie CORS (`npm/cors`)
 * [ ] Bonus: Dodanie kompresji (`npm/compression`)
