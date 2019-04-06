@@ -17,8 +17,7 @@ const options = {
     bufferMaxEntries: 0,
     bufferCommands: false
 };
-// const connectionString = `mongodb://${process.env.HOST}:${process.env.PORT}/calendar`;
-const connectionString = `mongodb://${process.env.HOST}/calendar`;
+const connectionString = `mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}/calendar`;
 
 module.exports = {
     connect() {

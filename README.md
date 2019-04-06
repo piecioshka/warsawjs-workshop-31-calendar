@@ -16,8 +16,8 @@ TBA
 * :white_check_mark: Wydzielenie konfiguracji do zewnętrznego pliku (`npm/dotenv`)
 * :white_check_mark: Dodanie logowania (`npm/morgan`)
 * :white_check_mark: Dodanie middleware-a do odczytywania body z zapytania POST (`npm/body-parser`)
-* :white_check_mark: Napisać testy weryfikujące endpointy (`npm/ajv`).
-    Wykorzystać schemy z katalogu `docs/schemas`.
+* :white_check_mark: Napisać testy weryfikujące endpointy (`npm/ajv`).<br/>
+    Wykorzystać schemy z katalogu `docs/schemas`.<br/>
     Schemy są wygenerowane za pomocą <https://www.jsonschema.net/>.
 * :white_check_mark: Podłączenie się od bazy danych (`npm/mongoose`)
 * :white_check_mark: Implementacja API na potrzeby części [klienckiej](https://github.com/G3F4/warsawjs-workshop-31-calendar-client) (`npm/dayjs`).
