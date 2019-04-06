@@ -11,10 +11,9 @@ const { connect } = require('../db');
 const EventModel = require('../models/event-model');
 
 let app = null;
-let db = null;
 
 beforeAll(async () => {
-    db = await connect();
+    await connect();
 });
 
 beforeEach(() => {
@@ -42,10 +41,17 @@ it('should response on /api/calendar?month=2019-04 with list in data key', () =>
 });
 
 it('should returns two events after add them', async () => {
-    const model = await new EventModel({
+    const model1 = await new EventModel({
         title: 'test-event-title-1',
         time: '2020-10-10T15:00'
-    }).save();
+    });
+    const model2 = await new EventModel({
+        title: 'test-event-title-1',
+        time: '2020-10-10T15:00'
+    });
+
+    await model1.save();
+    await model2.save();
 
     const res = await supertest(app)
         .get('/api/calendar?month=2020-10')
@@ -56,9 +62,10 @@ it('should returns two events after add them', async () => {
         return dayjs(date).isSame('2020-10-10');
     });
 
-    expect(item.events.length).toEqual(1);
+    expect(item.events.length).toEqual(2);
 
-    await model.remove();
+    await model1.remove();
+    await model2.remove();
 })
 
 it('should response on /api/calendar with schema valid response', () => {

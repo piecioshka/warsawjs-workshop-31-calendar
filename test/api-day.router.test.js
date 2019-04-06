@@ -12,10 +12,9 @@ const { connect } = require('../db');
 const EventModel = require('../models/event-model');
 
 let app = null;
-let db = null;
 
 beforeAll(async () => {
-    db = await connect();
+    await connect();
 });
 
 beforeEach(() => {
@@ -35,7 +34,6 @@ it('should response on /api/day', () => {
 
 it('should returns events in concrete day', async () => {
     try {
-
         const model = new EventModel({
             title: 'test-event-title-3',
             description: 'test-event-description-3',
