@@ -6,7 +6,7 @@
     "scripts": {
         "start": "node index.js",
         "dev": "nodemon index.js",
-        "test": "jasmine web/**/*.test.js"
+        "test": "jasmine test/*.js"
     },
     "license": "MIT",
     "devDependencies": {
@@ -21,6 +21,7 @@
         "dayjs": "^1.8.12",
         "dotenv": "^7.0.0",
         "express": "^4.16.4",
+        "mongoose": "^5.4.22",
         "morgan": "^1.9.1"
     }
 }

@@ -9,17 +9,17 @@ TBA
 
 ## Step by step 👣
 
-* [x] Stworzenie struktury aplikacji
-* [x] Stworzenie web servera (`npm/express`)
-* [x] Stworzenie pierwszego endpointa
-* [x] Napisanie testu integracyjnego (`npm/nock` & `npm/jasmine` & `npm/supertest`)
-* [x] Wydzielenie konfiguracji do zewnętrznego pliku (`npm/dotenv`)
-* [x] Dodanie logowania (`npm/morgan`)
-* [x] Dodanie middleware-a do odczytywania body z zapytania POST (`npm/body-parser`)
-* [x] Napisać testy weryfikujące endpointy (`npm/ajv`).
+* :white_check_mark: Stworzenie struktury aplikacji
+* :white_check_mark: Stworzenie web servera (`npm/express`)
+* :white_check_mark: Stworzenie pierwszego endpointa
+* :white_check_mark: Napisanie testu integracyjnego (`npm/nock` & `npm/jasmine` & `npm/supertest`)
+* :white_check_mark: Wydzielenie konfiguracji do zewnętrznego pliku (`npm/dotenv`)
+* :white_check_mark: Dodanie logowania (`npm/morgan`)
+* :white_check_mark: Dodanie middleware-a do odczytywania body z zapytania POST (`npm/body-parser`)
+* :white_check_mark: Napisać testy weryfikujące endpointy (`npm/ajv`).
     Wykorzystać schemy z katalogu `docs/schemas`.
     Schemy są wygenerowane za pomocą <https://www.jsonschema.net/>.
-* [ ] Implementacja API na potrzeby części [klienckiej](https://github.com/G3F4/warsawjs-workshop-31-calendar-client) (`npm/dayjs`).
+* :no_entry: Implementacja API na potrzeby części [klienckiej](https://github.com/G3F4/warsawjs-workshop-31-calendar-client) (`npm/dayjs`).
 
     + `GET: /api/calendar?month={YYYY-MM}` — zwracanie danych do budowy kalendarza
 
@@ -160,10 +160,11 @@ TBA
 
         </details>
 
-* [ ] Podłączenie się od bazy danych (`npm/mongoose`)
-* [ ] Bonus: Dodanie CORS (`npm/cors`)
-* [ ] Bonus: Dodanie kompresji (`npm/compression`)
-* [ ] Przepięcie credentiali z lokalnej bazy na współdzieloną
+* :no_entry: Podłączenie się od bazy danych (`npm/mongoose`)
+* :no_entry: Uwierzytelnienie za pomocą GitHuba (`npm/passport`)
+* :star2: Bonus: Dodanie CORS (`npm/cors`)
+* :star2: Bonus: Dodanie kompresji (`npm/compression`)
+* :no_entry: Przepięcie credentiali z lokalnej bazy na współdzieloną
 
 ## License
 

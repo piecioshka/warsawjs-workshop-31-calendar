@@ -1,40 +1,40 @@
 const express = require('express');
 const supertest = require('supertest');
+const bodyParser = require('body-parser');
 const Ajv = require('ajv');
 
 const ajv = new Ajv({ schemaId: 'auto' });
-const router = require('./api.router');
+const router = require('../web/routing/api.router');
 
-it('should response on /api/subscriptions', () => {
+let app = null;
 
-    const app = express();
+beforeEach(() => {
+    app = express();
+    app.use(bodyParser.json());
     router(app);
-
-    return supertest(app)
-        .post('/api/subscriptions')
-        .expect(200)
-        .then((res) => {
-            expect(res.text).not.toBeNull();
-        });
-
 });
 
-xit('should response on /api/subscriptions with schema valid response', () => {
+it('should response on /api/subscriptions', () => {
+    return supertest(app)
+        .post('/api/subscriptions')
+        .expect(200)
+        .then((res) => {
+            expect(res.body).not.toBeNull();
+        });
+});
 
-    const schema = require('../../docs/schemas/subscriptions.scheme.json');
+it('should response on /api/subscriptions with schema valid response', () => {
+
+    const schema = require('../docs/schemas/subscriptions.scheme.json');
     const validate = ajv.compile(schema);
-
-    const app = express();
-    router(app);
 
     return supertest(app)
         .post('/api/subscriptions')
         .expect(200)
         .then((res) => {
-            const valid = validate(res.text);
+            const valid = validate(res.body);
             expect(valid).toBeTruthy();
             expect(validate.errors).toBeNull();
-            console.log(validate.errors);
         });
 
 });
