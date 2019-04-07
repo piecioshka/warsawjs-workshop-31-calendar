@@ -8,7 +8,7 @@ const dayjs = require('dayjs');
 function buildCalendar(month) {
     const date = new Date(month);
 
-    const from = dayjs(dayjs(date).startOf('month').startOf('week').toDate());
+    const from = dayjs(date).startOf('month').startOf('week');
 
     const calendarWidth = 7;
     const calendarHeight = 6;

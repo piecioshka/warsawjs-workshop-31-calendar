@@ -12,7 +12,7 @@ TBA
 * :white_check_mark: Stworzenie struktury aplikacji
 * :white_check_mark: Stworzenie web servera (`npm/express`)
 * :white_check_mark: Stworzenie pierwszego endpointa
-* :white_check_mark: Napisanie testu integracyjnego (`npm/nock` & `npm/jasmine` & `npm/supertest`)
+* :white_check_mark: Napisanie testu integracyjnego (`npm/jasmine` & `npm/supertest`)
 * :white_check_mark: Wydzielenie konfiguracji do zewnętrznego pliku (`npm/dotenv`)
 * :white_check_mark: Dodanie logowania (`npm/morgan`)
 * :white_check_mark: Dodanie middleware-a do odczytywania body z zapytania POST (`npm/body-parser`)
