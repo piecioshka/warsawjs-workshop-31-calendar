@@ -29,13 +29,15 @@ TBA
         ```js
         {
             data: [
-                date: string(format=YYYY-MM-DD),
-                events: [
-                    {
-                        id: string(format=guid)
-                        title: string
-                    }
-                ]
+                {
+                    date: string(format=YYYY-MM-DD),
+                    events: [
+                        {
+                            id: string(format=guid)
+                            title: string
+                        }
+                    ]
+                }
             ]
         }
         ```
