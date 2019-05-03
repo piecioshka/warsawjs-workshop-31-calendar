@@ -4,8 +4,8 @@
     "description": "Back-end dla aplikacji klienckiej — kalendarz",
     "author": "Piotr Kowalski <piecioshka@gmail.com> (https://piecioshka.pl)",
     "scripts": {
-        "start": "node index.js",
-        "dev": "nodemon index.js",
+        "start": "node src/index.js",
+        "dev": "nodemon src/index.js",
         "test": "jasmine test/*.js"
     },
     "license": "MIT",

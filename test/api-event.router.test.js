@@ -3,16 +3,17 @@ const supertest = require('supertest');
 const bodyParser = require('body-parser');
 const Ajv = require('ajv');
 
+const router = require('../src/web/routes/api.router');
+const configLoader = require('../src/loaders/config');
+const databaseLoader = require('../src/loaders/db');
+const EventModel = require('../src/models/event-model');
+
 const ajv = new Ajv({ schemaId: 'auto' });
-const router = require('../web/routing/api.router');
-
-const { connect } = require('../db');
-const EventModel = require('../models/event-model');
-
 let app = null;
 
 beforeAll(async () => {
-    await connect();
+    await configLoader();
+    await databaseLoader();
 });
 
 beforeEach(() => {

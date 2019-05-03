@@ -3,9 +3,9 @@ const supertest = require('supertest');
 const bodyParser = require('body-parser');
 const Ajv = require('ajv');
 
-const ajv = new Ajv({ schemaId: 'auto' });
-const router = require('../web/routing/api.router');
+const router = require('../src/web/routes/api.router');
 
+const ajv = new Ajv({ schemaId: 'auto' });
 let app = null;
 
 beforeEach(() => {

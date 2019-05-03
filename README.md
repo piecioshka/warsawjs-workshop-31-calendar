@@ -1,7 +1,7 @@
 # warsawjs-workshop-31-calendar
 
-**WarsawJS Workshop #31 — Calendar**: Back-end dla aplikacji klienckiej — kalendarz — napisanej
-przez [@G3F4](https://github.com/G3F4/warsawjs-workshop-31-calendar-client)
+**WarsawJS Workshop #31 — Calendar**: Back-end dla [aplikacji klienckiej][client]
+ — kalendarz — napisanej przez [@G3F4][kamil-grabek]
 
 ## Demo 🎉
 
@@ -14,7 +14,10 @@ TBA
 * :white_check_mark: Stworzenie pierwszego endpointa
 * :white_check_mark: Napisanie testu integracyjnego (`npm/jasmine` & `npm/supertest`)
 * :white_check_mark: Wydzielenie konfiguracji do zewnętrznego pliku (`npm/dotenv`)
-* :white_check_mark: Dodanie logowania (`npm/morgan`)
+* :star2: Bonus: Dodanie middlewarów
+    + Logowanie requestów (`npm/morgan`)
+    + CORS (`npm/cors`)
+    + Włączenie kompresji nagłówków (`npm/compression`)
 * :white_check_mark: Dodanie middleware-a do odczytywania body z zapytania POST (`npm/body-parser`)
 * :white_check_mark: Napisać testy weryfikujące endpointy (`npm/ajv`).<br/>
     Wykorzystać schemy z katalogu `docs/schemas`.<br/>
@@ -163,11 +166,12 @@ TBA
 
         </details>
 
+* :star2: Walidacja parametrów zapytań HTTP (`npm/celebrate` & `npm/@hapi/joi`)
 * :star2: Bonus: Uwierzytelnienie za pomocą GitHuba (`npm/passport`)
-* :star2: Bonus: Dodanie CORS (`npm/cors`)
-* :star2: Bonus: Dodanie kompresji (`npm/compression`)
-* :star2: Przepięcie credentiali z lokalnej bazy na współdzieloną
 
 ## License
 
 [The MIT License](http://piecioshka.mit-license.org) @ 2019
+
+[app]: https://github.com/G3F4/warsawjs-workshop-31-calendar-client
+[kamil-grabek]: https://github.com/G3F4/
