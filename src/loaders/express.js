@@ -3,12 +3,13 @@ const bodyParser = require('body-parser');
 
 module.exports = (app) => {
 
-    // Middlewares
+    // Middleware Functions
     app.use(morgan('dev'));
+    app.use(bodyParser.urlencoded({ extended: true }));
     app.use(bodyParser.json());
 
     // Routing
-    require('../web/routes/base.router')(app);
-    require('../web/routes/api.router')(app);
+    require('../api/routes/base.router')(app);
+    require('../api/routes/api.router')(app);
 
 };

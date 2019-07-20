@@ -1,7 +1,7 @@
 const express = require('express');
 const supertest = require('supertest');
 
-const router = require('../src/web/routes/base.router');
+const router = require('../../src/api/routes/base.router');
 
 it('should response on /', () => {
     let app = express();

@@ -4,10 +4,10 @@ const Ajv = require('ajv');
 const dayjs = require('dayjs');
 const bodyParser = require('body-parser');
 
-const router = require('../src/web/routes/api.router');
-const configLoader = require('../src/loaders/config');
-const databaseLoader = require('../src/loaders/db');
-const EventModel = require('../src/models/event-model');
+const router = require('../../src/api/routes/api.router');
+const configLoader = require('../../src/loaders/config');
+const databaseLoader = require('../../src/loaders/db');
+const EventModel = require('../../src/models/event-model');
 
 const ajv = new Ajv({ schemaId: 'auto' });
 let app = null;

@@ -3,7 +3,7 @@ const supertest = require('supertest');
 const bodyParser = require('body-parser');
 const Ajv = require('ajv');
 
-const router = require('../src/web/routes/api.router');
+const router = require('../../src/api/routes/api.router');
 
 const ajv = new Ajv({ schemaId: 'auto' });
 let app = null;

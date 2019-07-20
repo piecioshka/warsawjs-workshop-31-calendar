@@ -5,12 +5,12 @@
 
 ## Demo 🎉
 
-TBA
+Dostępne tylko po uruchomieniu bazy danych MongoDB oraz ewentualnie klienta.
 
 ## Step by step 👣
 
 * :white_check_mark: Stworzenie struktury aplikacji
-* :white_check_mark: Stworzenie web servera (`npm/express`)
+* :white_check_mark: Stworzenie web serwera (`npm/express`)
 * :white_check_mark: Stworzenie pierwszego endpointa
 * :white_check_mark: Napisanie testu integracyjnego (`npm/jasmine` & `npm/supertest`)
 * :white_check_mark: Wydzielenie konfiguracji do zewnętrznego pliku (`npm/dotenv`)

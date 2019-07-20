@@ -3,10 +3,10 @@ const supertest = require('supertest');
 const bodyParser = require('body-parser');
 const Ajv = require('ajv');
 
-const router = require('../src/web/routes/api.router');
-const configLoader = require('../src/loaders/config');
-const databaseLoader = require('../src/loaders/db');
-const EventModel = require('../src/models/event-model');
+const router = require('../../src/api/routes/api.router');
+const configLoader = require('../../src/loaders/config');
+const databaseLoader = require('../../src/loaders/db');
+const EventModel = require('../../src/models/event-model');
 
 const ajv = new Ajv({ schemaId: 'auto' });
 let app = null;
@@ -26,7 +26,7 @@ afterEach(async () => {
     await EventModel.deleteMany({ title: 'test-event-title' });
 });
 
-const fake = () => ({
+const fakeEvent = () => ({
     title: 'test-event-title',
     description: 'test-event-description',
     time: new Date().toISOString(),
@@ -36,7 +36,7 @@ const fake = () => ({
 it('should save event on POST /api/event', async () => {
     const res = await supertest(app)
         .post('/api/event')
-        .send(fake())
+        .send(fakeEvent())
         .set('Accept', 'application/json')
         .expect('Content-Type', /json/)
         .expect(200)
@@ -49,7 +49,7 @@ it('should save event on POST /api/event', async () => {
 });
 
 it('should remove event on DELETE /api/event', async () => {
-    const model = new EventModel(fake());
+    const model = new EventModel(fakeEvent());
 
     await model.save();
 
@@ -70,14 +70,14 @@ it('should remove event on DELETE /api/event', async () => {
 });
 
 it('should update event on PUT /api/event/:id', async () => {
-    const model = new EventModel(fake());
+    const model = new EventModel(fakeEvent());
     await model.save();
 
     const id = model._id;
 
     const res = await supertest(app)
         .put(`/api/event/${id}`)
-        .send(Object.assign(fake(), {
+        .send(Object.assign(fakeEvent(), {
             title: 'ciasteczko'
         }))
         .set('Accept', 'application/json')
@@ -99,7 +99,7 @@ it('should response on /api/event with schema valid response', () => {
 
     return supertest(app)
         .post('/api/event')
-        .send(fake())
+        .send(fakeEvent())
         .set('Accept', 'application/json')
         .expect('Content-Type', /json/)
         .expect(200)
