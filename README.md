@@ -1,7 +1,8 @@
 # warsawjs-workshop-31-calendar
 
-**WarsawJS Workshop #31 — Calendar**: Back-end dla [aplikacji klienckiej][client]
- — kalendarz — napisanej przez [@G3F4][kamil-grabek]
+⛩️ WarsawJS Workshop #31 — Node.js — Calendar — Back-end part
+
+Front-end part created by @g3f4 — https://github.com/G3F4/warsawjs-workshop-31-calendar-client
 
 ## Demo 🎉
 
@@ -172,6 +173,3 @@ Dostępne tylko po uruchomieniu bazy danych MongoDB oraz ewentualnie klienta.
 ## License
 
 [The MIT License](http://piecioshka.mit-license.org) @ 2019
-
-[app]: https://github.com/G3F4/warsawjs-workshop-31-calendar-client
-[kamil-grabek]: https://github.com/G3F4/
