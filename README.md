@@ -1,6 +1,6 @@
 # warsawjs-workshop-31-calendar
 
-⛩️ WarsawJS Workshop #31 — Node.js — Calendar — Back-end part
+⛩️ WarsawJS Workshop #31 — Node.js
 
 Front-end part created by @g3f4 — https://github.com/G3F4/warsawjs-workshop-31-calendar-client
 
