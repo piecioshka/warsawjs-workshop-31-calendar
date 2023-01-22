@@ -4,7 +4,7 @@
 
 Front-end part created by @g3f4 — https://github.com/G3F4/warsawjs-workshop-31-calendar-client
 
-## Demo 🎉
+## Preview 🎉
 
 Dostępne tylko po uruchomieniu bazy danych MongoDB oraz ewentualnie klienta.
 
